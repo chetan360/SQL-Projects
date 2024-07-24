@@ -1,20 +1,16 @@
-# HR Management System
+# SQL Projects
 
 ## Description
 
-This HR Management System allows for the management of employee records, payroll, benefits, and performance evaluations. It includes features for employee database management, payroll processing, benefits tracking, and performance reviews.
-
-## Features
-
-- Employee database management
-- Payroll processing
-- Benefits tracking
-- Performance reviews
+I am Creating Some SQL And JSON projects in this Repository.
 
 ## Technologies Used
 
 - SQL Server
-- SQL scripts for database setup and management
+- Oracle
+- Postgres Sql
+- MongoDB
+- MySQl
 
 ## Setup Instructions
 
