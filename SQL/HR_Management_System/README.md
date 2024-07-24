@@ -25,3 +25,27 @@ This HR Management System allows for the management of employee records, payroll
    ```
 
    cd SQL-Projects\SQL\HR_Management_System
+
+## Indexes
+
+1. Non Clustered Index for Sorting Base Salary then Bonus Salary
+
+```bash
+CREATE NONCLUSTERED INDEX IX_tblSalary_Base_Salary
+ON tblSalary (Base_Salary DESC, Bonus_Salary DESC)
+```
+
+2. Sort Name by First Name and then last name
+
+```bash
+CREATE NONCLUSTERED INDEX IX_tblEmployee_Name
+ON tblEmployee (First_Name ASC, Last_Name ASC)
+```
+
+3. Filtered Index for Email are not empty
+
+```bash
+CREATE NONCLUSTERED INDEX IX_tblApplicant_Email
+ON tblApplicant (Email)
+WHERE Email IS NOT NULL
+```
