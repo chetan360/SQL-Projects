@@ -71,7 +71,7 @@ CREATE FULLTEXT CATALOG BenefitCatalog AS DEFAULT;
 
 ```bash
 CREATE FULLTEXT INDEX ON tblBenefit (Benefit_Type, Description)
-KEY INDEX PK**tblBenef**C6DE0D21CA472F9F
+KEY INDEX PK__tblBenef__C6DE0D21CA472F9F
 ON BenefitCatalog;
 ```
 
