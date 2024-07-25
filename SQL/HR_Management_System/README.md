@@ -75,6 +75,13 @@ KEY INDEX PK__tblBenef__C6DE0D21CA472F9F
 ON BenefitCatalog;
 ```
 
+## Unique index on email
+
+```bash
+CREATE UNIQUE INDEX IX_tblEmployee
+ON tblEmployee (Email);
+```
+
 ### Full text searches
 
 ### Column contains the word Health

@@ -14,6 +14,11 @@ CREATE NONCLUSTERED INDEX IX_tblApplicant_Email
 ON tblApplicant (Email)
 WHERE Email IS NOT NULL
 
+-- Unique index on email
+
+CREATE UNIQUE INDEX IX_tblEmployee 
+ON tblEmployee (Email);
+
 -- Full text index on Benefit
 
 SELECT FULLTEXTSERVICEPROPERTY('IsFullTextInstalled') AS FullTextInstalled;
