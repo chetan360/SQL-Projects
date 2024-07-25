@@ -65,37 +65,12 @@ GO
 
 -- Sample data for Benefit
 
--- Benefit 1
-DECLARE @i INT = 1;
+INSERT INTO tblBenefit
+VALUES(1, 'Health Insurance', 'Coverage for halth insurance');
 
-WHILE(@i < 2500)
-BEGIN
-	INSERT INTO tblBenefit (BID, Benefit_Type, Description)
-	VALUES(
-	@i, 
-	'Health Insurance', 
-	'Coverage for health insurance'
-	);
+INSERT INTO tblBenefit
+VALUES(2, 'Retirement Plan', '401(k) plan with company match');
 
-	SET @i = @i + 1;
-END
-GO
-
--- Benefit 2
-DECLARE @i INT = 2501;
-
-WHILE(@i < 5000)
-BEGIN
-	INSERT INTO tblBenefit (BID, Benefit_Type, Description)
-	VALUES(
-	@i, 
-	'Retirement Plan', 
-	'401(k) plan with company match'
-	);
-
-	SET @i = @i + 1;
-END
-GO
 
 -- Dummy Employee Benefits
 
@@ -106,7 +81,7 @@ BEGIN
 	INSERT INTO tblEmployee_Benefit 
 	VALUES (
 	@i,
-	@i,
+	ABS(CHECKSUM(NEWID())) % 2 + 1,
 	'2024-08-01'
 	);
 	SET @i = @i + 1;
