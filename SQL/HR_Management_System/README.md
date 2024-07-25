@@ -104,7 +104,7 @@ Where Short_Listed = 'Yes';
 
 3. If selected then added to Employee table
 
-4. Displaying the Manager's and thire currousponding departments
+## Displaying the Manager's and thire currousponding departments
 
 ```bash
 SELECT m.MID, First_Name, Last_Name, Contact, Email, Img, DID, Department_Name
