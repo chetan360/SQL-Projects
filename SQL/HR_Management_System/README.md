@@ -98,13 +98,13 @@ Where Short_Listed = 'Yes';
 
 ## (Manually Work)
 
-## Sort Listed candidate is get Interviewed
+1. Sort Listed candidate is get Interviewed
 
-## And then its depends on the HR to select or reject
+2. And then its depends on the HR to select or reject
 
-## If selected then added to Employee table
+3. If selected then added to Employee table
 
-## Displaying the Manager's and thire currousponding departments
+4. Displaying the Manager's and thire currousponding departments
 
 ```bash
 SELECT m.MID, First_Name, Last_Name, Contact, Email, Img, DID, Department_Name
