@@ -52,54 +52,68 @@ WHERE Email IS NOT NULL
 
 ## Full text index on Benefit
 
+```bash
 SELECT FULLTEXTSERVICEPROPERTY('IsFullTextInstalled') AS FullTextInstalled;
+```
 
 1. if result is 0 then install full text index
 2. And after installation check again
 
 ### Create Full-Text Catalog
 
+```bash
 CREATE FULLTEXT CATALOG BenefitCatalog AS DEFAULT;
+```
 
 ### Create Full-Text Index on tblBenefit
 
+```bash
 CREATE FULLTEXT INDEX ON tblBenefit (Benefit_Type, Description)
 KEY INDEX PK**tblBenef**C6DE0D21CA472F9F
 ON BenefitCatalog;
+```
 
 ### Full text searches
 
 ### Column contains the word Health
 
-SELECT \*
+```bash
+SELECT *
 FROM tblBenefit
 WHERE CONTAINS(Benefit_Type, 'Health');
+```
 
 ### Description contains medical coverage related to health insurance
 
-SELECT \*
+```bash
+SELECT *
 FROM tblBenefit
 WHERE FREETEXT(Description, 'medical coverage');
+```
 
 ### Column contains the word Health
 
 ### and then the result is in decsending order by rank in table format
 
-SELECT \*
+```bash
+SELECT *
 FROM tblBenefit b
 INNER JOIN CONTAINSTABLE( tblBenefit, Benefit_Type, 'Health') ct
 ON b.BID = ct.[KEY]
 ORDER BY RANK DESC;
+```
 
 ### Description contains medical coverage related to health insurance
 
 ### and then the result is in decsending order by rank in table format
 
-SELECT \*
+```bash
+SELECT *
 FROM tblBenefit b
 INNER JOIN FREETEXTTABLE(tblBenefit, Description, 'medical coverage') ct
 ON b.BID = ct.[KEY]
 ORDER BY RANK DESC;
+```
 
 ## Adding Data
 
