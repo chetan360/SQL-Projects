@@ -24,7 +24,9 @@ This HR Management System allows for the management of employee records, payroll
    git clone https://github.com/chetan360/SQL-Projects
    ```
 
-2. cd SQL-Projects\SQL\HR_Management_System
+2. ```bash
+   cd SQL-Projects\SQL\HR_Management_System
+   ```
 
 ## Indexes
 
