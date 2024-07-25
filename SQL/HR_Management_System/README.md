@@ -52,6 +52,13 @@ ON tblApplicant (Email)
 WHERE Email IS NOT NULL
 ```
 
+## Unique index on email
+
+```bash
+CREATE UNIQUE INDEX IX_tblEmployee
+ON tblEmployee (Email);
+```
+
 ## Full text index on Benefit
 
 ```bash
@@ -73,13 +80,6 @@ CREATE FULLTEXT CATALOG BenefitCatalog AS DEFAULT;
 CREATE FULLTEXT INDEX ON tblBenefit (Benefit_Type, Description)
 KEY INDEX PK__tblBenef__C6DE0D21CA472F9F
 ON BenefitCatalog;
-```
-
-## Unique index on email
-
-```bash
-CREATE UNIQUE INDEX IX_tblEmployee
-ON tblEmployee (Email);
 ```
 
 ### Full text searches
